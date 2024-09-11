@@ -1,0 +1,26 @@
+5
+12
+Bat tre dong xanh
+John
+2011
+50000
+13
+Chien Binh Cau Vong
+Harari
+2003
+40000
+14
+Cay cam ngot cua toi
+Maria
+2005
+100000
+15
+Dark nhan tam
+Thames
+1999
+72000
+16
+Chia re
+Marshalls
+2000
+90000
