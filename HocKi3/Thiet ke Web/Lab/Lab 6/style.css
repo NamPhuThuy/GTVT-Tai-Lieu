@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(./images/plan-page.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Lato', sans-serif;
+    width: 1180px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+section{
+    text-align: center;
+    
+}
+article{
+    display: inline-block;
+    background-color: #262626;
+    margin: 80px 20px 0 20px;
+    border:5px solid #424242;
+    color: #a1a1a1;
+    padding:15px 20px 0px 20px;
+}
+article p
+{
+    max-width:300px;
+    margin-top: 25px;
+}
+
+article h1
+{
+    font-size: 1.5em;
+    color:#FFF;
+}
+
+p[class="price"]
+{
+    font-size: 3em;
+    font-weight: bold;
+    color:#27dcc4;
+    margin: 40px 0;
+
+}
+
+button
+{
+    background-color: #27dcc4;
+    color:#fff;
+    padding: 15px 30px;
+    margin: 10px 0;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: #ACACACAC;
+}
+
+ul
+{
+    padding: 0;
+}
+
+li
+{
+    list-style: none;
+    padding: 5px 0;
+}

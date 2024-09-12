@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShowTiming</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="Movies_List.css">
+    <link rel="stylesheet" href="../Home_Page/header.css">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/8ef26ea626.js" crossorigin="anonymous"></script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("header").style.padding = "20px 10px";
+                document.getElementById("logo").style.height = "25px";
+            } else {
+                document.getElementById("header").style.padding = "30px 10px";
+                document.getElementById("logo").style.height = "35px";
+            }
+        }
+    </script>  
+        <header id="header">
+            <nav class="nav container ">
+                <div class="logo">
+                    <a href="../Home_Page/Home_Page.html">
+                        <svg viewBox="0 0 111 30" data-uia="netflix-logo" class="svg-icon svg-icon-netflix-logo logo-img"
+                            id="logo" aria-hidden="true" focusable="false">
+                            <g id="netflix-logo">
+                                <path
+                                    d="M105.06233,14.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L102.374168,20.4686475 L98.9371075,28.4375293 C97.2499766,28.1563408 95.5928391,28.061674 93.9057081,27.8432843 L99.9372012,14.0931671 L94.4680851,-5.68434189e-14 L99.5313525,-5.68434189e-14 L102.593495,7.87421502 L105.874965,-5.68434189e-14 L110.999156,-5.68434189e-14 L105.06233,14.2806261 Z M90.4686475,-5.68434189e-14 L85.8749649,-5.68434189e-14 L85.8749649,27.2499766 C87.3746368,27.3437061 88.9371075,27.4055675 90.4686475,27.5930265 L90.4686475,-5.68434189e-14 Z M81.9055207,26.93692 C77.7186241,26.6557316 73.5307901,26.4064111 69.250164,26.3117443 L69.250164,-5.68434189e-14 L73.9366389,-5.68434189e-14 L73.9366389,21.8745899 C76.6248008,21.9373887 79.3120255,22.1557784 81.9055207,22.2804387 L81.9055207,26.93692 Z M64.2496954,10.6561065 L64.2496954,15.3435186 L57.8442216,15.3435186 L57.8442216,25.9996251 L53.2186709,25.9996251 L53.2186709,-5.68434189e-14 L66.3436123,-5.68434189e-14 L66.3436123,4.68741213 L57.8442216,4.68741213 L57.8442216,10.6561065 L64.2496954,10.6561065 Z M45.3435186,4.68741213 L45.3435186,26.2498828 C43.7810479,26.2498828 42.1876465,26.2498828 40.6561065,26.3117443 L40.6561065,4.68741213 L35.8121661,4.68741213 L35.8121661,-5.68434189e-14 L50.2183897,-5.68434189e-14 L50.2183897,4.68741213 L45.3435186,4.68741213 Z M30.749836,15.5928391 C28.687787,15.5928391 26.2498828,15.5928391 24.4999531,15.6875059 L24.4999531,22.6562939 C27.2499766,22.4678976 30,22.2495079 32.7809542,22.1557784 L32.7809542,26.6557316 L19.812541,27.6876933 L19.812541,-5.68434189e-14 L32.7809542,-5.68434189e-14 L32.7809542,4.68741213 L24.4999531,4.68741213 L24.4999531,10.9991564 C26.3126816,10.9991564 29.0936358,10.9054269 30.749836,10.9054269 L30.749836,15.5928391 Z M4.78114163,12.9684132 L4.78114163,29.3429562 C3.09401069,29.5313525 1.59340144,29.7497422 0,30 L0,-5.68434189e-14 L4.4690224,-5.68434189e-14 L10.562377,17.0315868 L10.562377,-5.68434189e-14 L15.2497891,-5.68434189e-14 L15.2497891,28.061674 C13.5935889,28.3437998 11.906458,28.4375293 10.1246602,28.6868498 L4.78114163,12.9684132 Z"
+                                    id="Fill-14"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="../Home_Page/Home_Page.html" class="nav-link"> <i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="nav-item"><a href="Movies_List.html" class="nav-link"> <i class="fa-solid fa-film"></i>Movie</a></li>
+                    <li class="nav-item"><a href="../Ticket_Price/Ticket_Price.html" class="nav-link"><i class="fa-solid fa-ticket"></i> Ticket Price</a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><i class="fa-solid fa-chart-simple"></i>Statics</a></li>
+                </ul>
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button class="search-btn btn "><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="menu-bar">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+
+        <section class="section">
+            <h1 class="heading-text">Phim Đang Chiếu </h1>
+            <div id="container">
+                <form id="choose">
+                    <input type="date">
+                    <select name="links" id="" size="1" onchange="window.location.href=this.value;">
+                        <option value="">Home Galaxy</option>
+                    </select>
+                </form>
+            </div>
+        </section>
+        <div class="type-text">
+            <h2>Phim Khoa Học Viễn Tưởng</h2>
+        </div>
+        <section class="hero">
+            <div class="wraper">
+                <div class="row">
+                
+                    <div class="img"><img src="../images/Sci-Fi/Captain_Marvel.jpg" alt="film picture"></div>
+                    <div class="content">
+                        <h2 class="heading">Captain Marvel</h2>
+                        <div class="rare">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="rating">
+                                <div class="rating-top">
+                                    <strong>6.8</strong>
+                                    <span>/10</span>
+                                    <div class="rating-bottom">
+                                        <span>92</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="evaluate btn" >Đánh giá</button>
+                            
+                        </div>
+                        <div class="time">
+                            <p class="btn time-btn">C13</p>
+                            <p class="timing"><i class="fa-solid fa-clock"></i> 146 phút</p>
+                            <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 156</a>
+                            <a href="" class="share btn-second">chia sẻ</a>
+                        </div>
+                        <div class="description">
+                            <div class="actor row-text">
+                                <span class="text">Diễn Viên: </span> <p class="descript">  Anna Boden, Ryan Fleck, Nicole Perlman, Geneva Robertson-Dworet, <br> Carly Mensch, Meg LeFauve, Liz Flahive , </p>
+                                
+                            </div>
+                            <div class="kind row-text">
+                                <span class="text">Thể Loại: </span> <p class="descript"> khoa Học Giả Tưởng</p>
+            
+                            </div>
+                            <div class="country row-text">
+                                <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+            
+                            </div>
+                            <div class="product row-text">
+                                <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+            
+                            </div>
+                            <div class="director row-text">
+                                <span class="text">Đạo diễn: </span> <p class="descript"> Anna Boden, Ryan Fleck</p>
+            
+                            </div>
+                            <div class="day row-text">
+                                <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/06/2022</p>
+            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="wraper">
+                    <div class="row">
+                    <div class="img"><img src="../images/Sci-Fi/Pacific_Rim.jpg" alt="film picture"></div>
+                    <div class="content">
+                        <h2 class="heading">Pacific Rim</h2>
+                        <div class="rare">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="rating">
+                                <div class="rating-top">
+                                    <strong>6.3</strong>
+                                    <span>/10</span>
+                                    <div class="rating-bottom">
+                                        <span>87</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="evaluate btn" >Đánh giá</button>
+                            
+                        </div>
+                        <div class="time">
+                            <p class="btn time-btn">C13</p>
+                            <p class="timing"><i class="fa-solid fa-clock"></i> 105 phút</p>
+                            <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 100</a>
+                            <a href="" class="share btn-second">chia sẻ</a>
+                        </div>
+                        <div class="description">
+                            <div class="actor row-text">
+                                <span class="text">Diễn Viên: </span> <p class="descript"> Sushar Manaying, Teerapat Satjakul,<br> Vithaya Pansringarm, Wanmai Chatborirak</p>
+                                
+                            </div>
+                            <div class="kind row-text">
+                                <span class="text">Thể Loại: </span> <p class="descript"> Khoa Học Viễn Tưởng</p>
+            
+                            </div>
+                            <div class="country row-text">
+                                <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+            
+                            </div>
+                            <div class="product row-text">
+                                <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+            
+                            </div>
+                            <div class="director row-text">
+                                <span class="text">Đạo diễn: </span> <p class="descript">  Guillermo del Toro</p>
+            
+                            </div>
+                            <div class="day row-text">
+                                <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 16/09/2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div class="type-text">
+            <h2>Phim Hoạt Hình</h2>
+        </div>
+        <section class="hero">
+            <div class="wraper">
+                <div class="row">
+                    <div class="img"><img src="../images/Cartoon/My_Neighbour_Totoro.jpg" alt="film picture"></div>
+                    <div class="content">
+                        <h2 class="heading">My Neighbour Totoro</h2>
+                        <div class="rare">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="rating">
+                                <div class="rating-top">
+                                    <strong>8.1</strong>
+                                    <span>/10</span>
+                                    <div class="rating-bottom">
+                                        <span>92</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="evaluate btn" >Đánh giá</button>
+                        </div>
+                        <div class="time">
+                            <p class="btn time-btn">C13</p>
+                            <p class="timing"><i class="fa-solid fa-clock"></i> 123 phút</p>
+                            <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 90</a>
+                            <a href="" class="share btn-second">chia sẻ</a>
+                        </div>
+                        <div class="description">
+                            <div class="actor row-text">
+                                <span class="text">Diễn Viên: </span> <p class="descript"> cartoon</p>
+                                
+                            </div>
+                            <div class="kind row-text">
+                                <span class="text">Thể Loại: </span> <p class="descript"> Hoạt Hình</p>
+            
+                            </div>
+                            <div class="country row-text">
+                                <span class="text">Quốc gia: </span> <p class="descript"> Nhật Bản</p>
+            
+                            </div>
+                            <div class="product row-text">
+                                <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+            
+                            </div>
+                            <div class="director row-text">
+                                <span class="text">Đạo diễn: </span> <p class="descript">  Hayao Miyazaki</p>
+            
+                            </div>
+                            <div class="day row-text">
+                                <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/10/2022</p>
+            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="wraper">
+                    <div class="row">
+                    
+                        <div class="img"><img src="../images/Cartoon/Princess_Mononoke.jpg" alt="film picture"></div>
+                        <div class="content">
+                            <h2 class="heading">Princess Mononoke</h2>
+                            <div class="rare">
+                                <i class="fa-solid fa-star"></i>
+                                <div class="rating">
+                                    <div class="rating-top">
+                                        <strong>8.4</strong>
+                                        <span>/10</span>
+                                        <div class="rating-bottom">
+                                            <span>90</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="evaluate btn" >Đánh giá</button>
+                                
+                            </div>
+                            <div class="time">
+                                <p class="btn time-btn">C13</p>
+                                <p class="timing"><i class="fa-solid fa-clock"></i> 140 phút</p>
+                                <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 79</a>
+                                <a href="" class="share btn-second">chia sẻ</a>
+                            </div>
+                            <div class="description">
+                                <div class="actor row-text">
+                                    <span class="text">Diễn Viên: </span> <p class="descript"> Cartoon</p>
+                                    
+                                </div>
+                                <div class="kind row-text">
+                                    <span class="text">Thể Loại: </span> <p class="descript"> Hoạt Hình</p>
+                
+                                </div>
+                                <div class="country row-text">
+                                    <span class="text">Quốc gia: </span> <p class="descript"> Nhật Bản</p>
+                
+                                </div>
+                                <div class="product row-text">
+                                    <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+                
+                                </div>
+                                <div class="director row-text">
+                                    <span class="text">Đạo diễn: </span> <p class="descript">  Hayao Miyazaki</p>
+                
+                                </div>
+                                <div class="day row-text">
+                                    <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/10/2022</p>
+                
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+        </section>
+        <div class="type-text">
+            <h2>Phim Tình Cảm Lãng Mạn</h2>
+        </div>
+        <section class="hero">
+            <div class="wraper">
+                <div class="row">
+                
+                    <div class="img"><img src="../images/Romantic/Me_Before_You.jpg" alt="film picture"></div>
+                    <div class="content">
+                        <h2 class="heading">Me Before You</h2>
+                        <div class="rare">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="rating">
+                                <div class="rating-top">
+                                    <strong>7.4</strong>
+                                    <span>/10</span>
+                                    <div class="rating-bottom">
+                                        <span>78</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="evaluate btn" >Đánh giá</button>
+                            
+                        </div>
+                        <div class="time">
+                            <p class="btn time-btn">C13</p>
+                            <p class="timing"><i class="fa-solid fa-clock"></i> 89 phút</p>
+                            <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 70</a>
+                            <a href="" class="share btn-second">chia sẻ</a>
+                        </div>
+                        <div class="description">
+                            <div class="actor row-text">
+                                <span class="text">Diễn Viên: </span> <p class="descript"> Sam Worthington, Zoe Saldana, Stephen Lang ,<br> Mayte Michelle Rodríguez, Sigourney Weaver</p>
+                                
+                            </div>
+                            <div class="kind row-text">
+                                <span class="text">Thể Loại: </span> <p class="descript"> Tình Cảm</p>
+            
+                            </div>
+                            <div class="country row-text">
+                                <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+            
+                            </div>
+                            <div class="product row-text">
+                                <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+            
+                            </div>
+                            <div class="director row-text">
+                                <span class="text">Đạo diễn: </span> <p class="descript"> Thea Sharrock</p>
+            
+                            </div>
+                            <div class="day row-text">
+                                <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/06/2022</p>
+            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="wraper">
+                    <div class="row">
+                    
+                        <div class="img"><img src="../images/Romantic/Flipped.jpg" alt="film picture"></div>
+                        <div class="content">
+                            <h2 class="heading">Flipped</h2>
+                            <div class="rare">
+                                <i class="fa-solid fa-star"></i>
+                                <div class="rating">
+                                    <div class="rating-top">
+                                        <strong>7.7</strong>
+                                        <span>/10</span>
+                                        <div class="rating-bottom">
+                                            <span>80</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="evaluate btn" >Đánh giá</button>
+                                
+                            </div>
+                            <div class="time">
+                                <p class="btn time-btn">C13</p>
+                                <p class="timing"><i class="fa-solid fa-clock"></i> 112 phút</p>
+                                <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 99</a>
+                                <a href="" class="share btn-second">chia sẻ</a>
+                            </div>
+                            <div class="description">
+                                <div class="actor row-text">
+                                    <span class="text">Diễn Viên: </span> <p class="descript"> Sam Worthington, Zoe Saldana, Stephen Lang ,<br> Mayte Michelle Rodríguez, Sigourney Weaver</p>
+                                    
+                                </div>
+                                <div class="kind row-text">
+                                    <span class="text">Thể Loại: </span> <p class="descript"> Tình Cảm</p>
+                
+                                </div>
+                                <div class="country row-text">
+                                    <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+                
+                                </div>
+                                <div class="product row-text">
+                                    <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+                
+                                </div>
+                                <div class="director row-text">
+                                    <span class="text">Đạo diễn: </span> <p class="descript">  Rob Reiner</p>
+                
+                                </div>
+                                <div class="day row-text">
+                                    <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/06/2022</p>
+                
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+        </section>
+        <div class="type-text">
+            <h2>Phim Kinh Dị</h2>
+        </div>
+        <section class="hero">
+            <div class="wraper">
+                <div class="row">
+                
+                    <div class="img"><img src="../images/Horror/The_Platform.jpg" alt="film picture"></div>
+                    <div class="content">
+                        <h2 class="heading">The Platform</h2>
+                        <div class="rare">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="rating">
+                                <div class="rating-top">
+                                    <strong>7</strong>
+                                    <span>/10</span>
+                                    <div class="rating-bottom">
+                                        <span>77</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="evaluate btn" >Đánh giá</button>
+                            
+                        </div>
+                        <div class="time">
+                            <p class="btn time-btn">C13</p>
+                            <p class="timing"><i class="fa-solid fa-clock"></i> 99 phút</p>
+                            <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 100</a>
+                            <a href="" class="share btn-second">chia sẻ</a>
+                        </div>
+                        <div class="description">
+                            <div class="actor row-text">
+                                <span class="text">Diễn Viên: </span> <p class="descript"> Sam Worthington, Zoe Saldana, Stephen Lang ,<br> Mayte Michelle Rodríguez, Sigourney Weaver</p>
+                                
+                            </div>
+                            <div class="kind row-text">
+                                <span class="text">Thể Loại: </span> <p class="descript"> Rùng Rợn</p>
+            
+                            </div>
+                            <div class="country row-text">
+                                <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+            
+                            </div>
+                            <div class="product row-text">
+                                <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+            
+                            </div>
+                            <div class="director row-text">
+                                <span class="text">Đạo diễn: </span> <p class="descript">  Galder Gaztelu-Urrutia</p>
+            
+                            </div>
+                            <div class="day row-text">
+                                <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 06/10/2022</p>
+            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="wraper">
+                    <div class="row">
+                        <div class="img"><img src="../images/Horror/The_Nun.jpg" alt="film picture"></div>
+                        <div class="content">
+                            <h2 class="heading">The Nun</h2>
+                            <div class="rare">
+                                <i class="fa-solid fa-star"></i>
+                                <div class="rating">
+                                    <div class="rating-top">
+                                        <strong>5.3</strong>
+                                        <span>/10</span>
+                                        <div class="rating-bottom">
+                                            <span>78</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="evaluate btn" >Đánh giá</button>
+                                
+                            </div>
+                            <div class="time">
+                                <p class="btn time-btn">C13</p>
+                                <p class="timing"><i class="fa-solid fa-clock"></i> 110 phút</p>
+                                <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 89</a>
+                                <a href="" class="share btn-second">chia sẻ</a>
+                            </div>
+                            <div class="description">
+                                <div class="actor row-text">
+                                    <span class="text">Diễn Viên: </span> <p class="descript"> Sam Worthington, Zoe Saldana, Stephen Lang ,<br> Mayte Michelle Rodríguez, Sigourney Weaver</p>
+                                    
+                                </div>
+                                <div class="kind row-text">
+                                    <span class="text">Thể Loại: </span> <p class="descript"> Rùng Rợn</p>
+                
+                                </div>
+                                <div class="country row-text">
+                                    <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+                
+                                </div>
+                                <div class="product row-text">
+                                    <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+                
+                                </div>
+                                <div class="director row-text">
+                                    <span class="text">Đạo diễn: </span> <p class="descript">  Corin Hardy</p>
+                
+                                </div>
+                                <div class="day row-text">
+                                    <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/09/2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <div class="type-text">
+            <h2>Phim Hài Hước</h2>
+        </div>
+        <section class="hero">
+            <div class="wraper">
+                <div class="row">
+                
+                    <div class="img"><img src="../images/Family/Grown_Ups.jpg" alt="film picture"></div>
+                    <div class="content">
+                        <h2 class="heading">Grown Ups</h2>
+                        <div class="rare">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="rating">
+                                <div class="rating-top">
+                                    <strong>7.2</strong>
+                                    <span>/10</span>
+                                    <div class="rating-bottom">
+                                        <span>87</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="evaluate btn" >Đánh giá</button>
+                            
+                        </div>
+                        <div class="time">
+                            <p class="btn time-btn">C13</p>
+                            <p class="timing"><i class="fa-solid fa-clock"></i> 98 phút</p>
+                            <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 78</a>
+                            <a href="" class="share btn-second">chia sẻ</a>
+                        </div>
+                        <div class="description">
+                            <div class="actor row-text">
+                                <span class="text">Diễn Viên: </span> <p class="descript"> Sam Worthington, Zoe Saldana, Stephen Lang ,<br> Mayte Michelle Rodríguez, Sigourney Weaver</p>
+                                
+                            </div>
+                            <div class="kind row-text">
+                                <span class="text">Thể Loại: </span> <p class="descript"> Hài Hước</p>
+            
+                            </div>
+                            <div class="country row-text">
+                                <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+            
+                            </div>
+                            <div class="product row-text">
+                                <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+            
+                            </div>
+                            <div class="director row-text">
+                                <span class="text">Đạo diễn: </span> <p class="descript">  Dennis Dugan</p>
+            
+                            </div>
+                            <div class="day row-text">
+                                <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/06/2022</p>
+            
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="wraper">
+                    <div class="row">
+                    
+                        <div class="img"><img src="../images/Family/Fred_Claus.jpg" alt="film picture"></div>
+                        <div class="content">
+                            <h2 class="heading">Fred Claus</h2>
+                            <div class="rare">
+                                <i class="fa-solid fa-star"></i>
+                                <div class="rating">
+                                    <div class="rating-top">
+                                        <strong>5.6</strong>
+                                        <span>/10</span>
+                                        <div class="rating-bottom">
+                                            <span>74</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="evaluate btn" >Đánh giá</button>
+                                
+                            </div>
+                            <div class="time">
+                                <p class="btn time-btn">C13</p>
+                                <p class="timing"><i class="fa-solid fa-clock"></i> 178 phút</p>
+                                <a href="#" class="like btn-second"><i class="fa-solid fa-thumbs-up"></i> Thích 57</a>
+                                <a href="" class="share btn-second">chia sẻ</a>
+                            </div>
+                            <div class="description">
+                                <div class="actor row-text">
+                                    <span class="text">Diễn Viên: </span> <p class="descript"> Sam Worthington, Zoe Saldana, Stephen Lang ,<br> Mayte Michelle Rodríguez, Sigourney Weaver</p>
+                                    
+                                </div>
+                                <div class="kind row-text">
+                                    <span class="text">Thể Loại: </span> <p class="descript"> Hài Hước</p>
+                
+                                </div>
+                                <div class="country row-text">
+                                    <span class="text">Quốc gia: </span> <p class="descript"> Mỹ</p>
+                
+                                </div>
+                                <div class="product row-text">
+                                    <span class="text">Nhà sản xuất: </span> <p class="descript"> 20th Century Fox</p>
+                
+                                </div>
+                                <div class="director row-text">
+                                    <span class="text">Đạo diễn: </span> <p class="descript">  David Dobkin</p>
+                
+                                </div>
+                                <div class="day row-text">
+                                    <span class="text">Ngày khởi chiếu: </span> <p class="descript"> 10/06/2022</p>
+                
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+        </section>
+        <script src="https://kit.fontawesome.com/8ef26ea626.js" crossorigin="anonymous"></script>
+        <div><br><br><br></div>
+
+    <footer class="w-100 py-4 flex-shrink-0 fs-3">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5";>
+                <div class = "links" style = "display: flex; justify-content: space-around; font-size: 24px;">
+                    <div style = "color: rgb(210, 203, 231)">Links:</div>
+                    <div><a href="Home_Page.html" class="text-decoration-none fs-3" style="margin:40px">Home</a></div>
+                    <div><a href="../Movies_List/Movies_List.html" class="text-decoration-none fs-3" style="margin:40px">Movie</a></div>
+                    <div><a href="../Ticket_Price/Ticket_Price.html" class="text-decoration-none fs-3" style="margin:40px">Ticket Price</a></div>
+                    <div><a href="../Ticket_Selling/Ticket_Selling.html" class="text-decoration-none fs-3" style="margin:60px">Statics</a></div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1 text-white" style="color: rbg(10, 12, 37); font-size: 1px;">.</h5>
+                    <p class="small text-muted" style="color: rbg(10, 12, 37); font-size: 1px;">.</p>
+                    <p class="small text-muted mb-0">&copy; Copyright by TN </p>
+                </div>
+                <!-- <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3 fs-2">Links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="Home_Page.html" class="text-decoration-none fs-3">Home</a></li>
+                        <li><a href="../Movies_List/Movies_List.html" class="text-decoration-none fs-3">Movie</a></li>
+                        <li><a href="../Ticket_Price/Ticket_Price.html" class="text-decoration-none fs-3">Ticket Price</a></li>
+                        <li><a href="../Ticket_Selling/Ticket_Selling.html" class="text-decoration-none fs-3">Statics</a></li>
+                    </ul>
+                </div> -->
+
+                
+                <!-- <div class="col-lg-2 col-md-6 ">
+                    <h5 class="text-white mb-3 fs-2">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#" class="text-decoration-none fs-3">Home</a></li>
+                        <li><a href="#" class="text-decoration-none fs-3">About</a></li>
+                        <li><a href="#" class="text-decoration-none fs-3">Get started</a></li>
+                        <li><a href="#" class="text-decoration-none fs-3">FAQ</a></li>
+                    </ul>
+                </div> -->
+                
+                
+            </div>
+            
+        </div>
+        <div class="container p-4 pb-0 text-center">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+              <!-- Facebook -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #3b5998; color: white;" 
+                href="#!"
+                role="button"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+        
+              <!-- Twitter -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #55acee; color: white;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-twitter"></i
+              ></a>
+        
+              <!-- Google -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #dd4b39; color: white;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-google"></i
+              ></a>
+        
+              <!-- Instagram -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #ac2bac; color: white;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-instagram"></i
+              ></a>
+        
+              <!-- Linkedin -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #0082ca; color: white;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <!-- Github -->
+              <a
+                class="btn text-white btn-floating m-1"
+                style="background-color: #333333; color: white;"
+                href="#!"
+                role="button"
+                ><i class="fab fa-github"></i
+              ></a>
+            </section>
+            <!-- Section: Social media -->
+
+
+            <div class="col-lg-4 col-md-6">
+                <form action="#">
+                    <div class="input-group mb-3">
+                        <input class="form-control" type="text" placeholder="User's problem" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <button class="btn btn-secondary" id="button-addon2" type="button"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </form>
+            </div>
+          </div>
+          <!-- Grid container -->
+    </footer>
+</body>
+</html>

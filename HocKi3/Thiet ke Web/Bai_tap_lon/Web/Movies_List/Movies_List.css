@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: rgb(10, 12, 37);
+}
+
+.hero{
+  margin-left: 20px;
+}
+
+.type-text{
+  position: relative;
+  padding: 20px 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.type-text h2{
+  padding-left: 24px;
+  color: white;
+}
+.type-text::before{
+  position: absolute;
+  content:'';
+  bottom: 0;
+  left: 24px;
+  right: 0;
+  height: 3px;
+  width: 10%;
+  background-color: rgb(175, 175, 247);
+}
+
+.section h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0 20px;
+}
+
+
+.section #choose {
+  margin: 10px 0;
+}
+.heading-text{
+  position: relative;
+  padding: 20px 0;
+  color: white;
+}
+
+.heading-text::before{
+  position: absolute;
+  content:'';
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  width: 10%;
+  background-color: orange;
+}
+.section #choose input, .section #choose select {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 20px;
+  height: 40px;
+  width: 300px;
+}
+
+
+.row{
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  gap: 20px;
+}
+.content{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  width: 350px;
+  height: 450px;
+}
+.row-text{
+  display: flex;
+  align-items: center;
+}
+.rare{
+  display: flex;
+  align-items: center;
+  
+}
+.heading{
+  font-size: 2.6rem;
+  line-height: 34px;
+  color: orangered;
+  font-weight: normal;
+  margin-bottom: 28px;
+  margin-top: 0px;
+}
+
+
+.rare i{
+  color: #fac917;
+  font-size: 1.4rem;
+}
+.rating-top strong
+{
+  font-size: 1.4rem;
+  color: #333;
+}
+.rating-top span{
+  font-size: 1.4rem;
+  color: #a0a3a7;  
+}
+.rating-bottom span{
+  font-size: 1.0rem;
+}
+.rating{
+  margin-right: 14px;
+}
+.btn{
+  padding: 5px 10px;
+  background-color: #f26b38;
+  color: #ffffff;
+  border-radius: 1px;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  line-height: 1.5rem;
+  font-weight: 300;
+  cursor: pointer;
+}
+.time{
+  display: flex;
+  align-items: center;
+  gap:10px;
+  margin-top: 30px;
+  margin-bottom: 18px;
+}
+.time-btn{
+  padding: 0;
+}
+.timing{
+  font-size: 16px;
+  line-height: 18px;
+  color: #43464b;
+}
+.btn-second{
+  padding: 0 6px;
+  background-color: #1877f2;
+  font-size: 13px;
+  line-height: 20px;
+  color: #ffffff;
+  font-weight: normal;
+  text-decoration: none;
+  border-radius: 2px;
+}
+.text{
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: normal;
+}
+.description{
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.descript{
+  color: rgb(13, 189, 130);
+}
+.descript:hover{
+  color: #f26b38;
+  cursor: pointer;
+}
+.actor{
+  align-items: flex-start;
+}
+
+.wraper{
+  margin: 20px 0;
+}
