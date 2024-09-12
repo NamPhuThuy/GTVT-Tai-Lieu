@@ -1,0 +1,7 @@
+E:\Code\AI\ATBMTT\Hellman\bin\Debug\Hellman.exe.config
+E:\Code\AI\ATBMTT\Hellman\bin\Debug\Hellman.exe
+E:\Code\AI\ATBMTT\Hellman\bin\Debug\Hellman.pdb
+E:\Code\AI\ATBMTT\Hellman\obj\Debug\Hellman.csproj.AssemblyReference.cache
+E:\Code\AI\ATBMTT\Hellman\obj\Debug\Hellman.csproj.CoreCompileInputs.cache
+E:\Code\AI\ATBMTT\Hellman\obj\Debug\Hellman.exe
+E:\Code\AI\ATBMTT\Hellman\obj\Debug\Hellman.pdb
