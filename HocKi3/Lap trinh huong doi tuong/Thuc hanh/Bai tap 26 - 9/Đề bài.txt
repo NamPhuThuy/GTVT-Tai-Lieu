@@ -1,9 +1,0 @@
-Xây dựng class Laptop, 
-có thuộc tính: model, hãng sx, giá, thời gian bảo hành
-phương thức: constructor, toán tử nhập, xuất và các method khác
-
-Viết c.trình nhập thông tin cho n laptop. In danh sách theo thứ tự tăng dần của giá
-Tìm laptop dưới giá nhập vào từ bàn phím của 1 hãng sản xuất cho trước
-
-manufacturer
-warranty period

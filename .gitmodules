@@ -1,3 +1,6 @@
 [submodule "GTVT-Nam-1"]
 	path = GTVT-Nam-1
 	url = https://github.com/NamPhuThuy/GTVT-Nam-1
+[submodule "GTVT-Nam-2"]
+	path = GTVT-Nam-2
+	url = https://github.com/NamPhuThuy/GTVT-Nam-2
