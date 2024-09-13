@@ -1,7 +1,0 @@
-E:\Code\AI\ATBMTT\RSAbai1\bin\Debug\RSAbai1.exe.config
-E:\Code\AI\ATBMTT\RSAbai1\bin\Debug\RSAbai1.exe
-E:\Code\AI\ATBMTT\RSAbai1\bin\Debug\RSAbai1.pdb
-E:\Code\AI\ATBMTT\RSAbai1\obj\Debug\RSAbai1.csproj.AssemblyReference.cache
-E:\Code\AI\ATBMTT\RSAbai1\obj\Debug\RSAbai1.csproj.CoreCompileInputs.cache
-E:\Code\AI\ATBMTT\RSAbai1\obj\Debug\RSAbai1.exe
-E:\Code\AI\ATBMTT\RSAbai1\obj\Debug\RSAbai1.pdb

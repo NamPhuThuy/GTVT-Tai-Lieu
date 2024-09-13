@@ -1,7 +1,0 @@
--A v -B v P
--C v -D v P
--E v C
-A
-E
-D
-P
