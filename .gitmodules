@@ -7,3 +7,6 @@
 [submodule "GTVT-Nam-3"]
 	path = GTVT-Nam-3
 	url = https://github.com/NamPhuThuy/GTVT-Nam-3
+[submodule "GTVT-Nam-4"]
+	path = GTVT-Nam-4
+	url = https://github.com/NamPhuThuy/GTVT-Nam-4
