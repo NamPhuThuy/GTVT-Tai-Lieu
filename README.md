@@ -33,12 +33,12 @@
         <td>phongpd@utc.edu.vn</td>
     </tr>
     <tr>
-        <td>Bùi Ngọc Dũng</td>
+        <td>thầy Bùi Ngọc Dũng</td>
         <td>0913045130</td>
         <td></td>
     </tr>
     <tr>
-        <td>Phạm Xuân Tích</td>
+        <td>thầy Phạm Xuân Tích</td>
         <td>0973087356</td>
         <td></td>
     </tr>
